@@ -1,0 +1,25 @@
+<h1>News Summarization</h1>
+
+<ng-container class="d-flex">
+
+  <form class="form" role="form" (ngSubmit)="startRequests()" [formGroup]="inputForm">
+  <!-- Input Text Box -->
+  <div style="display: flex; flex-direction: column">
+    <label for="inputText" style="font-size: 18px;font-weight: bold">Input Text:</label>
+    <textarea name="inputText" id="inputText" class="form-control" formControlName="inputText" rows="4" cols="50" placeholder="Enter input text here"></textarea>
+  </div>
+  <button type="submit" style="margin-top:10px; background-color: #ee7a28; color: black; font-size: 18px; padding: 10px 8px;border: orange; font-weight: bold; border-radius: 10px" class="btn btn-primary">Summarize</button>
+  </form>
+
+  <!-- Text Area -->
+  <div style="display: flex;flex-direction: column; margin-top: 10px">
+    <label for="modelOutputText" style="font-size: 18px; font-weight: bold">Our model's Summarization:</label>
+    <textarea id="modelOutputText" name="outputText" rows="4" cols="50" placeholder="Output text will appear here" [(ngModel)]="modelOutputText"></textarea>
+  </div>
+
+  <div style="display: flex;flex-direction: column; margin-top: 10px">
+    <label for="roGPTOutputText" style="font-size: 18px; font-weight: bold">RoGPT2's Summarization:</label>
+    <textarea id="roGPTOutputText" name="roGPTOutputText" rows="4" cols="50" placeholder="Output text will appear here" [(ngModel)]="roGPTOutputText"></textarea>
+  </div>
+
+</ng-container>
